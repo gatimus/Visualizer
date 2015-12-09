@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background: black;
+}
+
+#container {
+  margin: auto;
+  width: 500px;
+  transform:rotate(-90deg);
+  border-left: solid 1px;
+}
+
+progress {
+  display: block;
+  width: 500px;
+  height: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+}
+
+progress::-webkit-progress-bar {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: none;
+}
+
+progress::-webkit-progress-value {
+  background: green;
+}
+
+progress::-moz-progress-bar {
+  background: green;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+}
+
+audio {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+  <title>Visualizer</title>
+
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body ng-controller="controller">
+  
+  <!--
+  <div id="container">
+    <progress min="0" max="255" ng-repeat="x in bars track by $index" ng-attr-value="{{x}}"></progress>
+  </div>
+  -->
+  
+  <svg viewBox="0 0 127 255" preserveAspectRatio="none">
+    <defs>
+      <filter id="f1" x="0" y="0">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+      </filter>
+    </defs>
+    <!--<path ng-attr-d="{{path}}"></path>-->
+    <polyline points="{{points}}" style="fill:none;stroke:green;" filter="url(#f1)"></polyline>
+  </svg>
+  
+  <audio id="audio" src="http://fillyradio.com:8012/128k_mp3" controls></audio>
+
+  
+
+   
+</body>
+</html>
